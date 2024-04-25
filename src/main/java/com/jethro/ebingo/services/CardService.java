@@ -66,6 +66,13 @@ public class CardService {
             transposedBingo.add(newRow);
         }
 
+        for (List<Integer> row : transposedBingo) {
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+
         markDrawnBalls(transposedBingo, balls);
 
         return BingoChecker.checkForWin(transposedBingo);
@@ -78,6 +85,13 @@ public class CardService {
                     row.set(i, -1); // Mark the ball as drawn
                 }
             }
+        }
+
+        for (List<Integer> row : bingo) {
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
         }
     }
 }

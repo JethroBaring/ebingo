@@ -42,7 +42,7 @@ public class GameService {
     }
 
     public Map<String, List<Integer>> getDrawnBalls(int bcode) {
-        Map<String, List<Integer>> drawn = new HashMap();
+        Map<String, List<Integer>> drawn = new HashMap<>();
         List<Integer> drawnBalls = ballRepository.findAllByGameId(bcode);
         List<Integer> b = new ArrayList<>();
         List<Integer> i = new ArrayList<>();

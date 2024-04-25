@@ -60,6 +60,11 @@ public class BingoChecker {
         if (row.get(0) == -1 && row.get(1) == -1 && row.get(2) == -1 && row.get(3) == -1 && row.get(4) == -1) {
             return true;
         }
+        for (int i = 0; i <= row.size() - 5; i++) {
+            if (row.get(i) == -1 && row.get(i + 1) == -1 && row.get(i + 2) != -1 && row.get(i + 3) != -1 && row.get(i + 4) != -1) {
+                return true;
+            }
+        }
 
         return false;
     }
